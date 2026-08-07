@@ -1,198 +1,242 @@
-🐦 Flappy Bird Game (C++)
+# 🐦 Flappy Bird Game (C++)
 
-A simple console-based Flappy Bird clone developed in C++ using Object-Oriented Programming (OOP) concepts. The game challenges players to control a bird, avoid pipes, and achieve the highest score possible.
-
----
-
-📌 Project Overview
-
-This project recreates the classic Flappy Bird gameplay in the Windows console. The player controls a bird that continuously falls due to gravity and must press the Spacebar to jump through gaps between moving pipes. The game ends when the bird collides with a pipe or touches the top or bottom boundary.
-
-The project demonstrates the implementation of game logic, object-oriented design, file handling, and keyboard interaction in C++.
+A **console-based Flappy Bird clone** developed in **C++** using **Object-Oriented Programming (OOP)** concepts. The game challenges players to navigate a bird through moving pipes while avoiding collisions and achieving the highest possible score.
 
 ---
 
-✨ Features
+# 📌 Project Overview
 
-- 🎮 Console-based Flappy Bird gameplay
-- 🐦 Bird movement with gravity and jumping mechanics
+This project is a recreation of the classic **Flappy Bird** game for the Windows console. The player controls a bird that continuously falls due to gravity and must press the **Spacebar** to jump through gaps between moving pipes. The game ends when the bird collides with a pipe or touches the upper or lower boundary.
+
+The project was built to strengthen understanding of **Object-Oriented Programming**, **game development fundamentals**, **collision detection**, **file handling**, and **Windows console programming**.
+
+---
+
+# ✨ Features
+
+- 🐦 Smooth bird movement with gravity
+- ⬆️ Spacebar jump mechanics
 - 🚧 Multiple moving pipes
 - 💥 Collision detection
 - 📈 Real-time score tracking
-- 🏆 High score system using file handling
+- 🏆 Persistent high score system using file handling
 - 📖 Instructions menu
 - ℹ️ About section
 - 📋 Interactive main menu
-- 🚪 Exit screen with final score
+- 🚪 Professional exit screen
 
 ---
 
-🛠 Technologies Used
+# 🛠️ Technologies Used
 
 - C++
 - Object-Oriented Programming (OOP)
 - Windows Console API
 - File Handling
 - Keyboard Input Handling
-- Visual Studio / Code::Blocks (Windows)
+- Visual Studio
 
 ---
 
-📂 Project Structure
+# 📂 Project Structure
 
-FlappyBird/
+```text
+Flappy-Bird-CPP/
 │
-├── Classes.h            # Class declarations
-├── Classes.cpp          # Class implementations
-├── Main.cpp             # Program entry point
-├── HighScore.txt        # Stores highest score
-├── Instructions.txt     # Game instructions
-├── About.txt            # Game information
+├── Classes.h
+├── Classes.cpp
+├── Main.cpp
+├── HighScore.txt
+├── Instructions.txt
+├── About.txt
 └── README.md
+```
 
 ---
 
-🏗 Class Structure
+# 🏗️ Class Design
 
-Bird
+## 🐦 Bird Class
 
 Responsible for:
 
-- Bird position
-- Jumping
-- Gravity movement
+- Bird movement
+- Jump mechanics
+- Gravity simulation
+- Position management
 - Displaying the bird
-- Resetting the bird
 
-Pipe
+### Key Functions
+
+- `DisplayBird()`
+- `jumpBird()`
+- `MoveBird()`
+- `Reset()`
+
+---
+
+## 🚧 Pipe Class
 
 Responsible for:
 
-- Pipe generation
-- Pipe movement
-- Gap management
-- Displaying pipes
+- Creating pipes
+- Moving pipes across the screen
+- Managing pipe dimensions
+- Rendering upper and lower pipes
 
-Score
+### Key Functions
+
+- `DisplayPipe()`
+- `MovePipe()`
+- `setX()`
+
+---
+
+## 📈 Score Class
 
 Responsible for:
 
-- Current score
-- Score display
-- Score reset
-- Score increment
+- Tracking the player's score
+- Displaying the current score
+- Increasing the score
+- Resetting the score
 
-Game
+### Key Functions
 
-Controls the complete gameplay:
+- `IncreaseScore()`
+- `DisplayScore()`
+- `ResetScore()`
+
+---
+
+## 🎮 Game Class
+
+Controls the complete gameplay including:
 
 - Game loop
-- Rendering
+- Screen rendering
 - User input
 - Collision detection
-- Score checking
+- Score management
 - High score management
-- Instructions
+- Instructions screen
 - About section
 - Exit screen
 
+### Key Functions
+
+- `StartGame()`
+- `Update()`
+- `Display()`
+- `HandleInput()`
+- `CheckCollision()`
+- `CheckScore()`
+- `ShowScore()`
+
 ---
 
-🎮 Controls
+# 🎮 Controls
 
-Key| Action
-Spacebar| Jump
-Menu Options| Navigate through the game menu
+| Key | Action |
+|------|--------|
+| **Spacebar** | Make the bird jump |
+| **Menu Options** | Navigate through the game |
 
 ---
 
-▶️ How to Run
+# ▶️ How to Run
 
-1. Clone this repository.
+1. Clone the repository.
 
-git clone https://github.com/your-username/FlappyBird.git
+```bash
+git clone https://github.com/hamid-fastian/Flappy-Bird-CPP.git
+```
 
-2. Open the project in Visual Studio or another Windows-compatible C++ IDE.
+2. Open the project in **Visual Studio**.
 
-3. Compile the project.
+3. Build the solution.
 
 4. Run the executable.
 
 ---
 
-📖 Game Flow
+# 🎯 Gameplay
 
 1. Launch the game.
-2. Select Start Game.
-3. Press Spacebar to keep the bird flying.
-4. Pass through pipe gaps.
-5. Earn points for each pipe cleared.
-6. Avoid collisions.
-7. Try to beat the saved high score.
+2. Select **Start Game**.
+3. Press the **Spacebar** to keep the bird flying.
+4. Pass safely through the gaps between pipes.
+5. Earn points by clearing each pipe.
+6. Avoid collisions with pipes and screen boundaries.
+7. Try to achieve a new high score.
 
 ---
 
-📸 Screenshots
-Main Menu
+# 📸 Screenshots
 
-<img width="286" height="201" alt="image" src="https://github.com/user-attachments/assets/60a01553-e622-4b60-a775-c4e37807cfe1" />
+## 🏠 Main Menu
 
-Gameplay
-
-<img width="892" height="322" alt="image" src="https://github.com/user-attachments/assets/6d313eb8-a1d1-44e4-a9b0-8b2cc926fc1e" />
-
-Game Over Screen
-
-<img width="298" height="346" alt="image" src="https://github.com/user-attachments/assets/e5d551d8-50d4-4f55-b337-1fa4493e5fc4" />
+<img width="286" height="201" alt="image" src="https://github.com/user-attachments/assets/28e828ba-99c2-44cd-99ab-6ae1838a4b19" />
 
 ---
 
-📚 Concepts Demonstrated
+## 🎮 Gameplay
 
-- Classes and Objects
+<img width="892" height="322" alt="image" src="https://github.com/user-attachments/assets/1118edfb-3450-4d11-821f-3faa8f3703ec" />
+
+
+## 💥 Game Over Screen
+
+<img width="298" height="346" alt="image" src="https://github.com/user-attachments/assets/19360376-5953-4a6f-9300-81a8bc40bf75" />
+
+---
+
+# 📚 Concepts Demonstrated
+
+- Object-Oriented Programming
+- Classes & Objects
 - Encapsulation
 - Constructors
-- Member Functions
 - Arrays of Objects
 - File Handling
-- Console Graphics
-- Keyboard Input
+- Keyboard Input Handling
+- Windows Console API
 - Collision Detection
-- Game Loop
-- Object Interaction
+- Game Loop Design
 - Basic Game Development
 
 ---
 
-🚀 Future Improvements
+# 🚀 Future Improvements
 
-- Random pipe heights
+- Randomized pipe heights
 - Difficulty levels
-- Multiple bird characters
-- Sound effects
 - Colored console graphics
-- Better animations
-- Pause and Resume
-- Restart option
-- Leaderboard with multiple players
+- Sound effects
+- Pause and resume functionality
+- Restart without exiting
+- Multiple bird characters
+- Leaderboard system
+- Improved animations
 - Cross-platform support
 
 ---
 
-👨‍💻 Developer
+# 👨‍💻 Developer
 
-Malik Hamid Raza
+**Malik Hamid Raza**
 
-Second-Year BS Artificial Intelligence Student
+**BS Artificial Intelligence Student**
 
-Passionate about C++, Python, Object-Oriented Programming, and Software Development.
+Passionate about **C++**, **Python**, **Object-Oriented Programming**, and **Software Development**.
 
-GitHub: https://github.com/hamid-fastian
-
-LinkedIn: https://www.linkedin.com/in/malik-hamid-raza-9338693a8
+- **GitHub:** https://github.com/hamid-fastian
+- **LinkedIn:** https://www.linkedin.com/in/malik-hamid-raza-9338693a8
 
 ---
 
-📄 License
+# 📄 License
 
-This project is developed for educational and learning purposes. Feel free to use and modify it for academic projects.
+This project is licensed under the **MIT License**.
+
+Feel free to use, modify, and learn from this project for educational purposes.
