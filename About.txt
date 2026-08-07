@@ -1,0 +1,10 @@
+
+Flappy Bird Console Edition
+
+Developed using:
+- C++
+- Object Oriented Programming
+- Console Graphics
+
+Developer:
+    ======> Malik Hamid Raza <=======

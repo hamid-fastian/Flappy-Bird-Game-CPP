@@ -1,0 +1,6 @@
+
+SPACE  : Jump Bird
+
+Avoid pipes and pass through gaps.
+
+Each pipe crossed = +1 score.
